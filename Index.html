@@ -1,101 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WOLF - Animal Rescue Token</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#050816;color:#fff}
-header{padding:120px 10%;text-align:center;background:linear-gradient(135deg,#0b1020,#111827)}
-h1{font-size:4rem}
-.hero p{max-width:800px;margin:20px auto;color:#d1d5db}
-.btn{display:inline-block;padding:14px 30px;background:#2563eb;color:#fff;text-decoration:none;border-radius:12px;margin:10px}
-section{padding:80px 10%}
-.title{text-align:center;font-size:2.5rem;margin-bottom:20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
-.card{background:#111827;padding:25px;border-radius:18px}
-footer{text-align:center;padding:40px;background:#0b1020}
-nav{position:fixed;top:0;width:100%;padding:18px;background:rgba(0,0,0,.7);backdrop-filter:blur(8px)}
-nav ul{display:flex;justify-content:center;gap:25px;list-style:none}
-nav a{color:#fff;text-decoration:none}
-.logo{font-weight:800;text-align:center}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOLF | Salvando Vidas, Dejando Huella</title>
+    <!-- Tailwind CSS para un diseño moderno y rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+        .font-title {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-custom-dark {
+            background-color: #111827;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased">
 
-<nav>
-<ul>
-<li><a href="#about">Proyecto</a></li>
-<li><a href="#help">Ayuda</a></li>
-<li><a href="#tokenomics">Tokenomics</a></li>
-<li><a href="#roadmap">Roadmap</a></li>
-<li><a href="#community">Comunidad</a></li>
-</ul>
-</nav>
+    <!-- Navegación -->
+    <nav class="bg-custom-dark border-b border-gray-800 sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Icono de Lobo/Perro temporal -->
+                <span class="text-3xl">🐺</span>
+                <span class="font-title font-black text-2xl tracking-wider text-white">WOLF</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+                <a href="#inicio" class="hover:text-orange-400 transition-colors">Inicio</a>
+                <a href="#mision" class="hover:text-orange-400 transition-colors">Misión</a>
+                <a href="#como-ayudar" class="hover:text-orange-400 transition-colors">Cómo Ayudar</a>
+                <a href="#comunidad" class="hover:text-orange-400 transition-colors">Comunidad</a>
+            </div>
+            <div>
+                <a href="#donar" class="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-5 py-2 rounded-full font-bold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-orange-500/20">
+                    Donar Ahora
+                </a>
+            </div>
+        </div>
+    </nav>
 
-<header class="hero">
-<div class="logo">🐺 WOLF</div>
-<h1>WOLF</h1>
-<p>Proyecto Web3 solidario dedicado al rescate, alimentación, atención veterinaria y adopción de animales abandonados.</p>
-<a href="#" class="btn">Comprar WOLF</a>
-<a href="#" class="btn">Whitepaper</a>
-</header>
+    <!-- Héroe (Sección Principal) -->
+    <header id="inicio" class="relative overflow-hidden min-h-[85vh] flex items-center justify-center px-6 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-0b0f19 to-black">
+        <div class="max-w-5xl mx-auto text-center z-10">
+            <span class="bg-orange-500/10 text-orange-400 border border-orange-500/20 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 inline-block">
+                Proyecto WOLF Activo
+            </span>
+            <h1 class="font-title font-black text-4xl sm:text-6xl md:text-7xl mb-6 tracking-tight leading-none">
+                La voz de los que <br>
+                <span class="gradient-text">no pueden pedir ayuda</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
+                WOLF es una iniciativa tecnológica y social dedicada al rescate, rehabilitación y reubicación de animales en situación de abandono. Transformamos el dolor en segundas oportunidades.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#como-ayudar" class="w-full sm:w-auto bg-white text-gray-900 font-bold px-8 py-3.5 rounded-xl hover:bg-gray-100 transition-all text-center">
+                    Ver Plan de Acción
+                </a>
+                <a href="#mision" class="w-full sm:w-auto border border-gray-700 hover:border-gray-500 text-gray-300 font-medium px-8 py-3.5 rounded-xl transition-all text-center">
+                    Conocer Más
+                </a>
+            </div>
+        </div>
+    </header>
 
-<section id="about">
-<h2 class="title">Proyecto</h2>
-<div class="card">
-<p>WOLF conecta blockchain y bienestar animal para financiar rescates, tratamientos veterinarios y campañas de adopción responsable mediante una comunidad global transparente.</p>
-</div>
-</section>
+    <!-- Estadísticas rápidas (Estilo Token) -->
+    <section class="border-y border-gray-800 bg-custom-dark/50 backdrop-blur-md py-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <p class="font-title font-black text-3xl md:text-4xl text-orange-500">2,500+</p>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Rescatados</p>
+            </div>
+            <div>
+                <p class="font-title font-black text-3xl md:text-4xl text-white">450+</p>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Hogares Encontrados</p>
+            </div>
+            <div>
+                <p class="font-title font-black text-3xl md:text-4xl text-orange-500">12K$</p>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">En Alimentos y Medicinas</p>
+            </div>
+            <div>
+                <p class="font-title font-black text-3xl md:text-4xl text-white">100%</p>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Transparencia</p>
+            </div>
+        </div>
+    </section>
 
-<section id="help">
-<h2 class="title">¿Cómo ayudamos?</h2>
-<div class="grid">
-<div class="card"><h3>🐕 Rescate</h3><p>Apoyo a refugios y rescatistas.</p></div>
-<div class="card"><h3>🍖 Alimentación</h3><p>Compra de alimento para animales vulnerables.</p></div>
-<div class="card"><h3>🏥 Veterinaria</h3><p>Vacunas, esterilización y tratamientos.</p></div>
-<div class="card"><h3>🏡 Adopción</h3><p>Búsqueda de hogares responsables.</p></div>
-</div>
-</section>
+    <!-- Misión y Enfoque -->
+    <section id="mision" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="font-title font-black text-3xl md:text-4xl text-white mb-6">
+                    ¿Por qué nace el <span class="text-orange-500">Proyecto WOLF</span>?
+                </h2>
+                <p class="text-gray-400 mb-4 leading-relaxed">
+                    Millones de animales deambulan por las calles sufriendo de hambre, enfermedades y maltrato. WOLF no es solo un refugio temporal, es una red de soporte diseñada para cambiar el ecosistema del bienestar animal.
+                </p>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    Utilizamos herramientas digitales y de comunidad para conectar a rescatistas independientes, veterinarias y adoptantes responsables en una sola plataforma eficiente.
+                </p>
+                <blockquote class="border-l-4 border-orange-500 pl-4 italic text-gray-300 my-4">
+                    "El respeto a la vida animal es el reflejo de una sociedad sana."
+                </blockquote>
+            </div>
+            <!-- Tarjeta visual interactiva -->
+            <div class="bg-gradient-to-br from-gray-800 to-custom-dark p-8 rounded-3xl border border-gray-700/50 shadow-2xl">
+                <h3 class="font-title font-bold text-xl text-white mb-4">Nuestros Pilares</h3>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li class="flex items-start">
+                        <span class="text-orange-500 mr-2">✔</span>
+                        <div><strong class="text-white">Rescate Inmediato:</strong> Fondos asignados a emergencias críticas y clínicas aliadas.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-orange-500 mr-2">✔</span>
+                        <div><strong class="text-white">Esterilización Masiva:</strong> La única solución real para frenar el abandono a largo plazo.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-orange-500 mr-2">✔</span>
+                        <div><strong class="text-white">Educación:</strong> Campañas de concientización sobre tenencia responsable.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<section id="tokenomics">
-<h2 class="title">Tokenomics</h2>
-<div class="grid">
-<div class="card"><h3>40%</h3><p>Liquidez</p></div>
-<div class="card"><h3>20%</h3><p>Marketing</p></div>
-<div class="card"><h3>20%</h3><p>Fondo Animal</p></div>
-<div class="card"><h3>10%</h3><p>Desarrollo</p></div>
-<div class="card"><h3>10%</h3><p>Reserva</p></div>
-</div>
-</section>
+    <!-- Cómo Ayudar (Sección de Cajas) -->
+    <section id="como-ayudar" class="bg-custom-dark py-24 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-title font-black text-3xl md:text-4xl text-white mb-4">¿Cómo puedes formar parte?</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">No necesitas ser un experto para salvar una vida. Hay un rol para cada persona en el ecosistema WOLF.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 hover:border-orange-500/50 transition-all group">
+                    <div class="text-3xl mb-4 group-hover:scale-110 transition-transform inline-block">🍕</div>
+                    <h3 class="font-title font-bold text-lg text-white mb-2">Donaciones Directas</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Aporta alimentos, medicinas o soporte económico directo que va 100% destinado a los refugios afiliados.</p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 hover:border-orange-500/50 transition-all group">
+                    <div class="text-3xl mb-4 group-hover:scale-110 transition-transform inline-block">🏡</div>
+                    <h3 class="font-title font-bold text-lg text-white mb-2">Hogar Temporal</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Brinda un espacio seguro a un animalito mientras encontramos a su familia ideal y definitiva.</p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 hover:border-orange-500/50 transition-all group">
+                    <div class="text-3xl mb-4 group-hover:scale-110 transition-transform inline-block">📢</div>
+                    <h3 class="font-title font-bold text-lg text-white mb-2">Difusión e Impacto</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Ayúdanos a compartir los casos en redes sociales. El algoritmo correcto salva vidas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="roadmap">
-<h2 class="title">Roadmap</h2>
-<div class="grid">
-<div class="card"><h3>Fase 1</h3><p>Lanzamiento y comunidad.</p></div>
-<div class="card"><h3>Fase 2</h3><p>Primeros rescates financiados.</p></div>
-<div class="card"><h3>Fase 3</h3><p>NFT solidarios y DAO.</p></div>
-<div class="card"><h3>Fase 4</h3><p>Expansión internacional.</p></div>
-</div>
-</section>
-
-<section id="community">
-<h2 class="title">Comunidad</h2>
-<div style="text-align:center">
-<a class="btn" href="#">X / Twitter</a>
-<a class="btn" href="#">Discord</a>
-<a class="btn" href="#">TikTok</a>
-</div>
-</section>
-
-<footer>
-<h2>WOLF</h2>
-<p>Rescuing Lives Through Blockchain.</p>
-<p>contacto@wolftoken.org</p>
-<p>© 2026 WOLF</p>
-</footer>
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-6 border-t border-gray-900 text-center text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl">🐺</span>
+                <span class="font-title font-bold tracking-wider text-white text-md">WOLF PROJECT</span>
+            </div>
+            <p>&copy; 2026 Proyecto WOLF. Dedicado a la protección animal. Todos los derechos reservados.</p>
+            <div class="flex space-x-4">
+                <!-- Enlaces rápidos de redes -->
+                <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                <a href="#" class="hover:text-white transition-colors">Telegram</a>
+                <a href="#" class="hover:text-white transition-colors">Contacto</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
