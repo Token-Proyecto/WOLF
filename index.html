@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WOLF Project | Ecosistema Descentralizado de Ayuda Animal</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     
     <script>
@@ -43,39 +45,47 @@
             border-color: rgba(249, 115, 22, 0.4);
             box-shadow: 0 0 30px rgba(249, 115, 22, 0.1);
         }
-        /* Efecto de Diana/Círculo Brillante Mejorado con Logo */
+        /* Diana tecnológica adaptada al contraste del logo */
         .tech-target {
             position: relative;
             width: 320px;
             height: 320px;
             border-radius: 50%;
             border: 4px solid #ea580c;
-            box-shadow: 0 0 50px rgba(234, 88, 12, 0.4), inset 0 0 40px rgba(234, 88, 12, 0.2);
+            box-shadow: 0 0 50px rgba(234, 88, 12, 0.3), inset 0 0 40px rgba(234, 88, 12, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(circle, rgba(234,88,12,0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(234,88,12,0.1) 0%, transparent 70%);
         }
         .tech-target::before {
             content: '';
             position: absolute;
-            width: 110%;
-            height: 110%;
+            width: 112%;
+            height: 112%;
             border-radius: 50%;
-            border: 2px dashed rgba(249, 115, 22, 0.3);
-            animation: spin 30s linear infinite;
+            border: 2px dashed rgba(6, 182, 212, 0.25);
+            animation: spin 40s linear infinite;
+        }
+        .tech-target::after {
+            content: '';
+            position: absolute;
+            width: 105%;
+            height: 105%;
+            border-radius: 50%;
+            border: 1px solid rgba(234, 88, 12, 0.2);
         }
         .logo-container {
-            width: 75%;
-            height: 75%;
+            width: 80%;
+            height: 80%;
             border-radius: 50%;
             overflow: hidden;
-            background: #030712;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: #ffffff;
+            border: 6px solid #030712;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 30px rgba(234, 88, 12, 0.3);
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.2), inset 0 0 20px rgba(0,0,0,0.2);
             z-index: 10;
         }
         @keyframes spin {
@@ -83,19 +93,20 @@
         }
         @media (min-width: 1024px) {
             .tech-target {
-                width: 420px;
-                height: 420px;
+                width: 400px;
+                height: 400px;
             }
         }
     </style>
 </head>
 <body class="bg-wolf-950 text-gray-100 antialiased bg-grid-pattern">
 
+    <!-- NAV -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-wolf-950/80 backdrop-blur-md border-b border-gray-800/60 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 bg-gray-900 rounded-xl overflow-hidden border border-gray-800 p-1 group-hover:border-wolf-500 transition-colors">
-                    <img src="bab418b902cd34e14cf2b0fdaeaea3cb.jpg" alt="WOLF Logo" class="w-full h-full object-contain">
+                <div class="w-10 h-10 bg-white rounded-xl overflow-hidden border border-gray-800 p-0.5 group-hover:border-wolf-500 transition-colors shadow-md">
+                    <img src="logo.jpg" alt="WOLF Logo" class="w-full h-full object-contain">
                 </div>
                 <span class="font-display font-bold text-2xl tracking-tight text-white">WOLF<span class="text-wolf-500">.</span></span>
             </a>
@@ -117,14 +128,17 @@
         </div>
     </nav>
 
+    <!-- CABECERA -->
     <header class="relative min-h-screen flex items-center pt-24 overflow-hidden px-6 lg:px-16">
+        <!-- Brillo de fondo -->
         <div class="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-wolf-500/5 rounded-full blur-[100px] pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 py-12">
             
+            <!-- Columna Izquierda: Textos y Acciones -->
             <div class="lg:col-span-7 text-left order-2 lg:order-1">
                 <div class="inline-flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
-                    <span class="w-2 h-2 rounded-full bg-wolf-500 animate-pulse"></span>
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#22d3ee]"></span>
                     <span class="text-xs font-semibold tracking-wider uppercase text-gray-300 font-display">Proyecto WOLF Activo</span>
                 </div>
                 
@@ -147,10 +161,11 @@
                 </div>
             </div>
             
+            <!-- Columna Derecha: Diana Tecnológica con Logo Centrado -->
             <div class="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2 py-6">
                 <div class="tech-target">
                     <div class="logo-container">
-                        <img src="bab418b902cd34e14cf2b0fdaeaea3cb.jpg" alt="WOLF Project Emblem" class="w-full h-full object-cover">
+                        <img src="logo.jpg" alt="WOLF Project Emblem" class="w-[92%] h-[92%] object-contain rounded-full">
                     </div>
                 </div>
             </div>
@@ -158,6 +173,7 @@
         </div>
     </header>
 
+    <!-- SECCIÓN DE MÉTRICAS -->
     <section class="max-w-7xl mx-auto px-6 mb-32">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gradient-to-b from-gray-900/40 to-transparent p-8 rounded-3xl border border-gray-800/40 backdrop-blur-sm">
             <div class="p-6">
@@ -175,6 +191,7 @@
         </div>
     </section>
 
+    <!-- EL ECOSISTEMA WOLF -->
     <section id="ecosistema" class="max-w-7xl mx-auto px-6 mb-32 relative">
         <div class="text-center mb-20">
             <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">Módulos del Ecosistema WOLF</h2>
@@ -204,13 +221,14 @@
                 <div>
                     <div class="w-12 h-12 bg-wolf-500/10 rounded-2xl flex items-center justify-center text-wolf-500 mb-6 font-bold group-hover:bg-wolf-500 group-hover:text-white transition-all">03</div>
                     <h3 class="font-display font-bold text-2xl text-white mb-3">Esterilización Masiva</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">El núcleo de la solución. El 40% de los recursos se inyectan en campañas agresivas de castración en zonas vulnerables y de alta densidad de abandono.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">El núcleo de la solución. El 40% de los recursos se inyectan en campaigns agresivas de castración en zonas vulnerables y de alta densidad de abandono.</p>
                 </div>
                 <span class="text-xs font-bold uppercase tracking-wider text-wolf-500 group-hover:translate-x-2 transition-transform inline-flex items-center gap-1 cursor-pointer">Calendario Quirúrgico &rarr;</span>
             </div>
         </div>
     </section>
 
+    <!-- SECCIÓN DE IMPACTO -->
     <section id="tokenomics" class="py-24 border-y border-gray-900 bg-gray-950/60 backdrop-blur-sm px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -249,6 +267,7 @@
         </div>
     </section>
 
+    <!-- ROADMAP -->
     <section id="roadmap" class="max-w-5xl mx-auto px-6 py-32">
         <div class="text-center mb-20">
             <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">Ruta de Expansión</h2>
@@ -271,6 +290,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN UNIRSE / REGISTRO -->
     <section id="unirse" class="max-w-4xl mx-auto px-6 mb-32">
         <div class="glass-card p-8 md:p-12 rounded-3xl border border-gray-800 relative overflow-hidden">
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-wolf-500/10 rounded-full blur-3xl"></div>
@@ -279,7 +299,7 @@
                 <h2 class="font-display font-bold text-3xl text-white mb-4">Haz parte del cambio hoy</h2>
                 <p class="text-gray-400 text-sm mb-8">Regístrate para recibir alertas de rescate cercanas o para enterarte de cómo auditar y participar en las próximas campañas de esterilización.</p>
                 
-                <form class="flex flex-col sm:flex-row gap-4">
+                <form class="flex flex-col sm:flex-row gap-4" onsubmit="event.preventDefault(); alert('¡Te has registrado correctamente!');">
                     <input type="email" placeholder="Tu correo electrónico" class="bg-gray-900 border border-gray-800 rounded-xl px-5 py-3 text-sm text-white focus:outline-none focus:border-wolf-500 flex-grow transition-colors" required>
                     <button type="submit" class="bg-wolf-600 hover:bg-wolf-500 text-white font-bold px-6 py-3 rounded-xl transition-all font-display text-sm whitespace-nowrap">
                         Unirse al Proyecto
@@ -289,12 +309,13 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer id="comunidad" class="bg-gray-950 border-t border-gray-900 px-6 py-16">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div class="md:col-span-2">
                 <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-8 h-8 bg-gray-900 rounded-lg overflow-hidden border border-gray-800 p-0.5">
-                        <img src="bab418b902cd34e14cf2b0fdaeaea3cb.jpg" alt="WOLF Logo" class="w-full h-full object-contain">
+                    <div class="w-8 h-8 bg-white rounded-lg overflow-hidden border border-gray-800 p-0.5">
+                        <img src="logo.jpg" alt="WOLF Logo" class="w-full h-full object-contain">
                     </div>
                     <span class="font-display font-bold text-2xl text-white">WOLF<span class="text-wolf-500">.</span></span>
                 </div>
