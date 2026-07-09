@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WOLF TOKEN ($WOLF) | El Token de Ayuda Animal Descentralizado</title>
+    <title>WOLF TOKEN ($WOLF) - El Token de Ayuda Animal Descentralizado</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     
     <script>
@@ -61,16 +63,8 @@
             width: 112%;
             height: 112%;
             border-radius: 50%;
-            border: 2px dashed rgba(6, 182, 212, 0.25);
+            border: 2px dashed rgba(249, 115, 22, 0.25);
             animation: spin 40s linear infinite;
-        }
-        .tech-target::after {
-            content: '';
-            position: absolute;
-            width: 105%;
-            height: 105%;
-            border-radius: 50%;
-            border: 1px solid rgba(234, 88, 12, 0.2);
         }
         .logo-container {
             width: 80%;
@@ -82,22 +76,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 40px rgba(6, 182, 212, 0.2), inset 0 0 20px rgba(0,0,0,0.2);
             z-index: 10;
         }
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-        @media (min-width: 1024px) {
-            .tech-target {
-                width: 400px;
-                height: 400px;
-            }
-        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @media (min-width: 1024px) { .tech-target { width: 400px; height: 400px; } }
     </style>
 </head>
 <body class="bg-wolf-950 text-gray-100 antialiased bg-grid-pattern">
 
+    <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-wolf-950/80 backdrop-blur-md border-b border-gray-800/60 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#" class="flex items-center space-x-3 group">
@@ -106,262 +93,176 @@
                 </div>
                 <span class="font-display font-bold text-2xl tracking-tight text-white">WOLF<span class="text-wolf-500">.</span></span>
             </a>
-            
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-gray-400">
-                <a href="#about" class="hover:text-white transition-colors">¿Qué es WOLF?</a>
-                <a href="#fourmeme" class="hover:text-white transition-colors">Lanzamiento</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors">¿Qué es $WOLF?</a>
                 <a href="#tokenomics" class="hover:text-white transition-colors">Tokenomics</a>
-                <a href="#utilidad" class="hover:text-white transition-colors">Módulos de Utilidad</a>
-                <a href="#roadmap" class="hover:text-white transition-colors">Fases</a>
+                <a href="#utilidad" class="hover:text-white transition-colors">Utilidad</a>
+                <a href="#roadmap" class="hover:text-white transition-colors">Ruta</a>
             </div>
-
-            <div class="flex items-center space-x-4">
-                <a href="https://four.meme" target="_blank" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-bold text-gray-900 rounded-xl group bg-gradient-to-br from-wolf-500 to-amber-500 group-hover:from-wolf-500 group-hover:to-amber-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-wolf-800">
-                    <span class="relative px-5 py-2 transition-all ease-in duration-75 bg-wolf-950 rounded-xl group-hover:bg-opacity-0 text-white font-medium">
-                        Comprar en Four.meme
-                    </span>
+            <div>
+                <a href="https://four.meme" target="_blank" class="bg-wolf-600 hover:bg-wolf-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-all shadow-md block">
+                    Comprar en Four.meme
                 </a>
             </div>
         </div>
     </nav>
 
+    <!-- HERO PRINCIPAL -->
     <header class="relative min-h-screen flex items-center pt-24 overflow-hidden px-6 lg:px-16">
-        <div class="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-wolf-500/5 rounded-full blur-[100px] pointer-events-none"></div>
-        
         <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 py-12">
-            
             <div class="lg:col-span-7 text-left order-2 lg:order-1">
-                <div class="inline-flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
-                    <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse shadow-[0_0_8px_#ea580c]"></span>
-                    <span class="text-xs font-semibold tracking-wider uppercase text-gray-300 font-display">Lanzamiento Exclusivo en Four.meme</span>
+                <div class="inline-flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-1.5 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                    <span class="text-xs font-semibold uppercase text-gray-300 font-display">Lanzamiento Justo en Four.meme</span>
                 </div>
-                
-                <h1 class="font-display font-bold text-4xl sm:text-6xl lg:text-6xl mb-6 tracking-tight text-white leading-[1.1]">
+                <h1 class="font-display font-bold text-4xl sm:text-6xl mb-6 tracking-tight text-white leading-[1.1]">
                     WOLF TOKEN <br>
-                    <span class="bg-gradient-to-r from-wolf-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">El Primer Activo de Impacto Animal en Binance Smart Chain</span>
+                    <span class="bg-gradient-to-r from-wolf-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">El Activo Comunitario de Impacto Animal en BSC</span>
                 </h1>
-                
-                <p class="text-gray-400 text-base sm:text-lg max-w-2xl mb-8 font-light leading-relaxed">
-                    $WOLF no es una memecoin común. Creado de forma transparente en <strong>Four.meme</strong>, fusiona el poder de la cultura viral con una arquitectura económica deflacionaria programada para inyectar recursos directamente en frentes de esterilización masiva, alimentación logística y rescate clínico inmutable.
+                <p class="text-gray-400 text-base sm:text-lg max-w-2xl mb-8 font-light">
+                    $WOLF es un token de comunidad descentralizado incubado en <strong>four.meme</strong> dentro de la BNB Chain. Fusiona la cultura cripto con una infraestructura contable transparente diseñada para canalizar apoyo a refugios, esterilizaciones masivas y logística de alimentación animal sin intermediarios.
                 </p>
 
+                <!-- CA BOX (Crucial para BscScan) -->
                 <div class="bg-gray-950/80 border border-gray-800/80 rounded-2xl p-4 mb-8 max-w-xl backdrop-blur-md">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Dirección del Contrato (BSC):</p>
+                    <p class="text-xs text-gray-500 uppercase font-semibold mb-1">Contrato Oficial (BSC):</p>
                     <div class="flex items-center justify-between gap-3">
-                        <code id="contractAddress" class="text-xs sm:text-sm text-wolf-500 font-mono break-all selection:bg-wolf-500 selection:text-white">0x0000000000000000000000000000000000000000</code>
-                        <button onclick="navigator.clipboard.writeText(document.getElementById('contractAddress').innerText); alert('Contrato copiado al portapapeles');" class="bg-gray-900 hover:bg-gray-800 text-gray-300 px-3 py-1.5 rounded-lg text-xs transition-all border border-gray-700 whitespace-nowrap">
-                            Copiar CA
+                        <code id="contractAddress" class="text-xs sm:text-sm text-wolf-500 font-mono break-all">TU_DIRECCION_DE_CONTRATO_AQUI</code>
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('contractAddress').innerText); alert('Copiado');" class="bg-gray-900 hover:bg-gray-800 text-gray-300 px-3 py-1.5 rounded-lg text-xs border border-gray-700">
+                            Copiar
                         </button>
                     </div>
                 </div>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="https://four.meme" target="_blank" class="bg-wolf-600 hover:bg-wolf-500 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-wolf-600/30 font-display text-center min-w-[180px]">
+                    <a href="https://four.meme" target="_blank" class="bg-wolf-600 hover:bg-wolf-500 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg font-display text-center min-w-[180px]">
                         Comprar $WOLF
                     </a>
-                    <a href="https://dexscreener.com" target="_blank" class="bg-gray-900/40 hover:bg-gray-900/80 text-gray-300 font-medium px-8 py-3.5 rounded-xl border border-gray-800 hover:border-gray-700 transition-all font-display text-center min-w-[180px] backdrop-blur-sm">
+                    <a href="https://dexscreener.com" target="_blank" class="bg-gray-900/40 hover:bg-gray-900/80 text-gray-300 font-medium px-8 py-3.5 rounded-xl border border-gray-800 transition-all font-display text-center min-w-[180px]">
                         Ver Gráfico Vivo
                     </a>
                 </div>
             </div>
-            
-            <div class="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2 py-6">
+            <div class="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2">
                 <div class="tech-target">
                     <div class="logo-container">
-                        <img src="logo.jpg" alt="WOLF Token Symbol" class="w-[92%] h-[92%] object-contain rounded-full">
+                        <img src="logo.jpg" alt="WOLF Emblem" class="w-[95%] h-[95%] object-contain rounded-full">
                     </div>
                 </div>
             </div>
-            
         </div>
     </header>
 
+    <!-- SOBRE EL PROYECTO -->
     <section id="about" class="max-w-7xl mx-auto px-6 mb-32 border-t border-gray-900 pt-20">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div class="lg:col-span-4">
-                <span class="text-xs font-bold tracking-widest text-wolf-500 uppercase block mb-3 font-display">Innovación en Four.meme</span>
-                <h2 class="font-display font-bold text-3xl text-white tracking-tight leading-tight">Eliminando intermediarios para salvar vidas.</h2>
+                <span class="text-xs font-bold tracking-widest text-wolf-500 uppercase block mb-3 font-display">Soberanía de Comunidad</span>
+                <h2 class="font-display font-bold text-3xl text-white tracking-tight">Cero preventas, lanzamiento 100% justo.</h2>
             </div>
-            <div class="lg:col-span-8 text-gray-400 space-y-6 text-base font-light leading-relaxed">
+            <div class="lg:col-span-8 text-gray-400 space-y-6 text-base font-light">
                 <p>
-                    El lanzamiento de <span class="text-white font-semibold">$WOLF</span> se ejecutó a través de la plataforma de lanzamiento justo (Fair Launch) de <strong>Four.meme</strong>, lo que garantiza que **no existió preventa a puertas cerradas, no hay asignaciones ocultas para el equipo de desarrollo, ni manipulación de insiders**. Cada token en circulación fue adquirido de manera equivalente bajo el algoritmo de curva de vinculación de la plataforma.
+                    Lanzado a través de la curva de vinculación automatizada de <strong>Four.meme</strong>, $WOLF garantiza un ecosistema limpio de asignaciones de equipo fraudulentas. El suministro completo se distribuyó equitativamente en el mercado, estableciendo un estándar ético idéntico al de los mayores movimientos descentralizados globales.
                 </p>
                 <p>
-                    Mientras que las fundaciones tradicionales desvían hasta el 60% de los capitales de ayuda en sueldos institucionales y aparatos burocráticos, $WOLF utiliza la automatización para tokenizar el soporte comunitario. Los fondos de la tesorería del protocolo se ejecutan y auditan públicamente de forma descentralizada.
+                    Aprovechando la eficiencia de costos de la red BNB, nuestro ecosistema promueve la trazabilidad total del capital recolectado a través de iniciativas comunitarias, redefiniendo el uso de tokens sociales en el siglo XXI.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="utilidad" class="max-w-7xl mx-auto px-6 mb-32 relative">
+    <!-- MÓDULOS DE UTILIDAD INFORMATIVA -->
+    <section id="utilidad" class="max-w-7xl mx-auto px-6 mb-32">
         <div class="text-center mb-20">
-            <span class="text-xs font-bold tracking-widest text-wolf-500 uppercase block mb-2 font-display">Infraestructura del Token</span>
-            <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">Módulos de Utilidad Real</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto text-sm">A diferencia de los tokens especulativos vacíos, $WOLF está estructurado para operar bajo tres pilares de utilidad en el ecosistema real.</p>
+            <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">Utilidad Estructural</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-sm">Los pilares funcionales que definen la visión a largo plazo de nuestra manada digital.</p>
         </div>
-
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass-card p-8 rounded-3xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
                 <div>
-                    <div class="w-12 h-12 bg-wolf-500/10 rounded-2xl flex items-center justify-center text-wolf-500 mb-6 font-bold group-hover:bg-wolf-500 group-hover:text-white transition-all">01</div>
-                    <h3 class="font-display font-bold text-2xl text-white mb-3">Trazabilidad Total</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Cada transacción de la tesorería comunitaria vinculada a compras masivas de alimentos o insumos veterinarios se registra en el ledger público de la blockchain. Cualquier tenedor de $WOLF puede realizar auditorías sociales sin necesidad de permisos de terceros.
-                    </p>
+                    <div class="w-12 h-12 bg-wolf-500/10 rounded-2xl flex items-center justify-center text-wolf-500 mb-6 font-bold">01</div>
+                    <h3 class="font-display font-bold text-2xl text-white mb-3">Trazabilidad en Bloque</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Mecanismo público de auditoría social donde los registros de donaciones de alimento e insumos médicos veterinarios se sincronizan de forma transparente para su validación colectiva.</p>
                 </div>
-                <span class="text-xs font-bold uppercase tracking-wider text-wolf-500 inline-flex items-center gap-1">Auditoría Abierta &rarr;</span>
             </div>
-
-            <div class="glass-card p-8 rounded-3xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
                 <div>
-                    <div class="w-12 h-12 bg-wolf-500/10 rounded-2xl flex items-center justify-center text-wolf-500 mb-6 font-bold group-hover:bg-wolf-500 group-hover:text-white transition-all">02</div>
-                    <h3 class="font-display font-bold text-2xl text-white mb-3">Red S.O.S Reactiva</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Arquitectura en desarrollo para el enrutamiento de reportes geolocalizados de animales abandonados en peligro inminente. El sistema busca emparejar de forma inteligente el caso con las clínicas de urgencias y rescatistas móviles verificados en el radio más cercano.
-                    </p>
+                    <div class="w-12 h-12 bg-wolf-500/10 rounded-2xl flex items-center justify-center text-wolf-500 mb-6 font-bold">02</div>
+                    <h3 class="font-display font-bold text-2xl text-white mb-3">Red de Auxilio S.O.S</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Mapeo y enrutamiento lógico de reportes de fauna en estado crítico de vulnerabilidad para conectarlos directamente con unidades de rescate y clínicas aliadas cercanas.</p>
                 </div>
-                <span class="text-xs font-bold uppercase tracking-wider text-wolf-500 inline-flex items-center gap-1">Protocolo Tecnológico &rarr;</span>
             </div>
-
-            <div class="glass-card p-8 rounded-3xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
                 <div>
-                    <div class="w-12 h-12 bg-wolf-500/10 rounded-2xl flex items-center justify-center text-wolf-500 mb-6 font-bold group-hover:bg-wolf-500 group-hover:text-white transition-all">03</div>
-                    <h3 class="font-display font-bold text-2xl text-white mb-3">Esterilización Dirigida</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        El núcleo estructural para mitigar la sobrepoblación callejera. Los recursos generados de manera colectiva se destinan a financiar campañas de castración coordinadas con cirujanos veterinarios en zonas de alta criticidad demográfica.
-                    </p>
-                </div>
-                <span class="text-xs font-bold uppercase tracking-wider text-wolf-500 inline-flex items-center gap-1">Plan de Control &rarr;</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="tokenomics" class="py-24 border-y border-gray-900 bg-gray-950/60 backdrop-blur-sm px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <span class="text-xs font-bold tracking-widest text-wolf-500 uppercase block mb-3 font-display">Métricas Seguras</span>
-                    <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-6">Mecanismo de Distribución</h2>
-                    <p class="text-gray-400 mb-8 leading-relaxed font-light">
-                        Lanzado enteramente bajo un esquema transparente y limpio, la estructura matemática de $WOLF prioriza la seguridad y los incentivos estables de liquidez a largo plazo:
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
-                            <div class="flex justify-between text-sm mb-1"><span class="font-bold text-white">100% Suministro de Lanzamiento Justo</span><span class="text-wolf-500 font-bold">100%</span></div>
-                            <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-wolf-500 h-full w-full rounded-full"></div></div>
-                            <p class="text-[11px] text-gray-500 mt-1">Lanzado enteramente a través de la curva de vinculación de Four.meme. Cero tokens retenidos por devs.</p>
-                        </div>
-                        <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
-                            <div class="flex justify-between text-sm mb-1"><span class="font-bold text-white">Liquidez Bloqueada & Quemada al Migrar</span><span class="text-wolf-500 font-bold">Seguro</span></div>
-                            <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-orange-400 h-full w-full rounded-full"></div></div>
-                            <p class="text-[11px] text-gray-500 mt-1">Los tokens de pool correspondientes a la liquidez de intercambio se inutilizan de por vida para evitar tirones de alfombra (Rugpulls).</p>
-                        </div>
-                        <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
-                            <div class="flex justify-between text-sm mb-1"><span class="font-bold text-white">Impuestos por Transacción (Tax)</span><span class="text-wolf-500 font-bold">0% / 0%</span></div>
-                            <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-amber-400 h-full w-0 rounded-full"></div></div>
-                            <p class="text-[11px] text-gray-500 mt-1">Sin tarifas ocultas de compra o venta. Libre circulación optimizada para listados en Exchanges eficientes.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex justify-center relative">
-                    <div class="absolute inset-0 bg-wolf-500/5 rounded-full blur-3xl"></div>
-                    <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-full border-4 border-dashed border-gray-800 flex items-center justify-center p-8 relative z-10">
-                        <div class="w-full h-full rounded-full border-2 border-wolf-500/20 flex flex-col items-center justify-center text-center p-6 bg-wolf-950">
-                            <span class="text-4xl mb-2">🔥</span>
-                            <p class="font-display font-bold text-xl text-white">Lanzamiento 100% Justo</p>
-                            <p class="text-xs text-gray-400 mt-2 max-w-[220px]">Propiedad del contrato renunciada. Comunidad soberana desde el bloque cero.</p>
-                        </div>
-                    </div>
+                    <div class="w-12 h-12 bg-wolf-500/10 rounded-2xl flex items-center justify-center text-wolf-500 mb-6 font-bold">03</div>
+                    <h3 class="font-display font-bold text-2xl text-white mb-3">Control de Natalidad</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Priorización y financiamiento sistemático de campañas quirúrgicas masivas de esterilización controlada en zonas vulnerables para romper de raíz el ciclo de abandono.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- TOKENOMICS -->
+    <section id="tokenomics" class="py-24 border-y border-gray-900 bg-gray-950/60 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-xs font-bold text-wolf-500 uppercase block mb-3 font-display">Métricas Transparentes</span>
+                <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-6">Distribución del Ecosistema</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
+                        <div class="flex justify-between text-sm mb-1"><span class="font-bold text-white">100% Suministro de Mercado</span><span class="text-wolf-500 font-bold">100%</span></div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full"><div class="bg-wolf-500 h-full w-full rounded-full"></div></div>
+                    </div>
+                    <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
+                        <div class="flex justify-between text-sm mb-1"><span class="font-bold text-white">Liquidez de Intercambio Bloqueada</span><span class="text-wolf-500 font-bold">LP Burned</span></div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full"><div class="bg-orange-500 h-full w-full rounded-full"></div></div>
+                    </div>
+                    <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
+                        <div class="flex justify-between text-sm mb-1"><span class="font-bold text-white">Impuestos de Transacción</span><span class="text-wolf-500 font-bold">0% Tax</span></div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full"><div class="bg-amber-400 h-full w-0 rounded-full"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center bg-gray-900/40 p-8 rounded-3xl border border-gray-800">
+                <span class="text-5xl block mb-4">🔥</span>
+                <h3 class="font-display font-bold text-2xl text-white mb-2">Renuncia de Contrato</h3>
+                <p class="text-gray-400 text-sm">Gobernanza absoluta en manos de los poseedores del token. Cero llaves administrativas de modificación.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROADMAP -->
     <section id="roadmap" class="max-w-5xl mx-auto px-6 py-24">
-        <div class="text-center mb-20">
-            <span class="text-xs font-bold tracking-widest text-wolf-500 uppercase block mb-2 font-display">Despliegue Estratégico</span>
-            <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">Fases de Desarrollo</h2>
-            <p class="text-gray-400 max-w-md mx-auto text-sm">Cronograma estructurado enfocado exclusivamente en la expansión comunitaria y consolidación técnica posterior al lanzamiento.</p>
+        <div class="text-center mb-16">
+            <h2 class="font-display font-bold text-3xl text-white">Fases de Despliegue</h2>
         </div>
-
         <div class="relative border-l border-gray-800 ml-4 md:ml-32 space-y-12">
-            <div class="relative pl-8 md:pl-12 group">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-wolf-500 border-4 border-wolf-950 group-hover:scale-125 transition-transform"></div>
-                <span class="text-xs font-bold text-wolf-500 uppercase tracking-widest font-display">Fase 01 — Génesis en Four.meme</span>
-                <h3 class="text-xl font-bold text-white mt-1 mb-2">Lanzamiento Base & Formación de la Manada</h3>
-                <p class="text-gray-400 text-sm max-w-3xl font-light leading-relaxed">
-                    Despliegue inicial del contrato a través de la curva en Four.meme. Campaña orgánica intensiva de marketing en canales criptográficos, indexación rápida en herramientas analíticas como Dexscreener y Dextools, y auditoría transparente del contrato base.
-                </p>
+            <div class="relative pl-8 group">
+                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-wolf-500 border-4 border-wolf-950"></div>
+                <span class="text-xs font-bold text-wolf-500 uppercase font-display">Fase 01</span>
+                <h3 class="text-xl font-bold text-white mt-1">Lanzamiento e Indexación Inicial</h3>
+                <p class="text-gray-400 text-sm mt-2">Despliegue de la curva en Four.meme, indexación en plataformas de análisis descentralizado y consolidación de los primeros nodos sociales.</p>
             </div>
-            <div class="relative pl-8 md:pl-12 group">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-orange-400 border-4 border-wolf-950 group-hover:scale-125 transition-transform"></div>
-                <span class="text-xs font-bold text-orange-400 uppercase tracking-widest font-display">Fase 02 — Consolidación de Liquidez</span>
-                <h3 class="text-xl font-bold text-white mt-1 mb-2">Migración y Listados en Plataformas Descentralizadas</h3>
-                <p class="text-gray-400 text-sm max-w-3xl font-light leading-relaxed">
-                    Completado de la curva de vinculación, migración automática de la liquidez a pools de intercambio descentralizados masivos con quema inmutable de claves de acceso. Alianzas estratégicas iniciales con los primeros 15 rescatistas independientes para modelar el sistema de auditoría.
-                </p>
-            </div>
-            <div class="relative pl-8 md:pl-12 group">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-wolf-950 group-hover:scale-125 transition-transform"></div>
-                <span class="text-xs font-bold text-amber-400 uppercase tracking-widest font-display">Fase 03 — Infraestructura de Utilidad</span>
-                <h3 class="text-xl font-bold text-white mt-1 mb-2">Despliegue del Sistema de Trazabilidad</h3>
-                <p class="text-gray-400 text-sm max-w-3xl font-light leading-relaxed">
-                    Lanzamiento del backend centralizado para vincular egresos médicos e insumos con identificadores únicos en el mapa interactivo. Primeras rondas de votaciones comunitarias para la definición geográfica de las campañas de esterilización médica masivas.
-                </p>
+            <div class="relative pl-8 group">
+                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-orange-500 border-4 border-wolf-950"></div>
+                <span class="text-xs font-bold text-orange-500 uppercase font-display">Fase 02</span>
+                <h3 class="text-xl font-bold text-white mt-1">Migración de Liquidez Masiva</h3>
+                <p class="text-gray-400 text-sm mt-2">Migración automatizada a exchanges estables, quema de LPs y expansión comunitaria orgánica en canales cripto.</p>
             </div>
         </div>
     </section>
 
-    <section id="unirse" class="max-w-4xl mx-auto px-6 mb-32">
-        <div class="glass-card p-8 md:p-12 rounded-3xl border border-gray-800 relative overflow-hidden">
-            <div class="absolute -top-24 -right-24 w-48 h-48 bg-wolf-500/10 rounded-full blur-3xl"></div>
-            <div class="relative z-10 max-w-xl">
-                <span class="text-xs font-bold tracking-widest text-wolf-500 uppercase block mb-2 font-display">Comunidad Activa</span>
-                <h2 class="font-display font-bold text-3xl text-white mb-4">Forma parte de la Gobernanza</h2>
-                <p class="text-gray-400 text-sm mb-8">Únete a nuestros canales de coordinación inmediata. Entérate primero de los hitos técnicos, participa en los raids comunitarios y ayuda a auditar de manera directa la evolución de $WOLF.</p>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://t.me" target="_blank" class="bg-wolf-600 hover:bg-wolf-500 text-white font-bold px-6 py-3.5 rounded-xl transition-all font-display text-sm text-center">
-                        Unirse al Telegram
-                    </a>
-                    <a href="https://x.com" target="_blank" class="bg-gray-900 hover:bg-gray-800 border border-gray-800 text-white font-bold px-6 py-3.5 rounded-xl transition-all font-display text-sm text-center">
-                        Seguir en Twitter / X
-                    </a>
-                </div>
+    <!-- FOOTER -->
+    <footer class="bg-gray-950 border-t border-gray-900 px-6 py-12 text-center md:text-left">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <span class="font-display font-bold text-xl text-white">WOLF<span class="text-wolf-500">.</span></span>
             </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-950 border-t border-gray-900 px-6 py-16">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div class="md:col-span-2">
-                <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-8 h-8 bg-white rounded-lg overflow-hidden border border-gray-800 p-0.5">
-                        <img src="logo.jpg" alt="WOLF Logo" class="w-full h-full object-contain">
-                    </div>
-                    <span class="font-display font-bold text-2xl text-white">WOLF<span class="text-wolf-500">.</span></span>
-                </div>
-                <p class="text-gray-400 text-sm max-w-sm leading-relaxed font-light">Ecosistema de impacto comunitario tokenizado en Four.meme, uniendo la velocidad criptográfica con el soporte verificado de fauna vulnerable.</p>
+            <div class="flex space-x-6 text-sm text-gray-400">
+                <a href="https://t.me" class="hover:text-white">Telegram</a>
+                <a href="https://x.com" class="hover:text-white">Twitter / X</a>
             </div>
-            <div>
-                <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">Enlaces Rápidos</h4>
-                <ul class="space-y-2 text-sm text-gray-400 font-light">
-                    <li><a href="https://four.meme" target="_blank" class="hover:text-white transition-colors">Comprar en Four.meme</a></li>
-                    <li><a href="#tokenomics" class="hover:text-white transition-colors">Métricas Financieras</a></li>
-                    <li><a href="#roadmap" class="hover:text-white transition-colors">Fases del Ecosistema</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">Descargo</h4>
-                <p class="text-xs text-gray-500 leading-relaxed font-light">
-                    Las criptomonedas de comunidad conllevan un riesgo de volatilidad inherente. Asegúrate de hacer tu propia investigación antes de participar en cualquier protocolo descentralizado.
-                </p>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto pt-8 border-t border-gray-900 flex flex-col sm:flex-row justify-between text-xs text-gray-500 gap-4">
-            <p>&copy; 2026 WOLF Project. Lanzado de forma justa bajo soberanía comunitaria.</p>
+            <p class="text-xs text-gray-500">&copy; 2026 WOLF Token. Todos los derechos reservados.</p>
         </div>
     </footer>
 
