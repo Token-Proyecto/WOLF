@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WOLF Project | Token de Apoyo y Protección Animal</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <script>
@@ -18,7 +20,7 @@
                         wolf: {
                             50: '#fff7ed',
                             100: '#ffedd5',
-                            500: '#f97316', /* Naranja identificador de la causa */
+                            500: '#f97316',
                             600: '#ea580c',
                             700: '#c2410c',
                         },
@@ -33,6 +35,7 @@
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased selection:bg-wolf-500 selection:text-white">
 
+    <!-- MENÚ DE NAVEGACIÓN -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 px-6 py-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <a href="#" class="flex items-center space-x-3 group">
@@ -44,6 +47,7 @@
             
             <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
                 <a href="#proposito" class="hover:text-slate-900 transition-colors">Propósito</a>
+                <a href="#casos" class="hover:text-slate-900 transition-colors">Casos de Ayuda</a>
                 <a href="#tokenomics" class="hover:text-slate-900 transition-colors">Distribución</a>
                 <a href="#modulos" class="hover:text-slate-900 transition-colors">Ecosistema</a>
                 <a href="#roadmap" class="hover:text-slate-900 transition-colors">Ruta</a>
@@ -57,52 +61,73 @@
         </div>
     </nav>
 
+    <!-- SECCIÓN HERO CON LOGO ESTRUCTURADO -->
     <header class="relative pt-36 pb-20 px-6 bg-gradient-to-b from-gray-50 via-white to-white border-b border-gray-100">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-flex items-center space-x-2 bg-wolf-50 border border-wolf-200 rounded-full px-4 py-1 mb-6">
-                <span class="w-2 h-2 rounded-full bg-wolf-500 animate-pulse"></span>
-                <span class="text-xs font-bold uppercase tracking-wider text-wolf-700">Lanzado en Four.meme (BNB Chain)</span>
-            </div>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-                Proyecto WOLF <br>
-                <span class="bg-gradient-to-r from-wolf-600 to-amber-500 bg-clip-text text-transparent">
-                    Tecnología Blockchain de Apoyo Animal
-                </span>
-            </h1>
-            
-            <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
-                Una iniciativa tecnológica estructurada para financiar, rescatar y proteger de manera directa a animales en situación de abandono, utilizando la red BNB Chain para garantizar microdonaciones eficientes y transparencia absoluta.
-            </p>
-
-            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 max-w-xl mx-auto mb-12 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div class="text-left w-full overflow-hidden">
-                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-0.5">Dirección del Contrato (BSC)</p>
-                    <code class="text-xs text-slate-900 font-mono block truncate font-bold">0x0000000000000000000000000000000000000000</code>
+            <!-- Columna Izquierda: Textos -->
+            <div class="lg:col-span-7 text-left">
+                <div class="inline-flex items-center space-x-2 bg-wolf-50 border border-wolf-200 rounded-full px-4 py-1 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-wolf-500 animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-wolf-700">Lanzado en Four.meme (BNB Chain)</span>
                 </div>
-                <button onclick="navigator.clipboard.writeText('0x0000000000000000000000000000000000000000'); alert('¡Contrato copiado al portapapeles!');" class="text-xs font-bold text-gray-700 bg-white hover:bg-gray-100 border border-gray-300 px-4 py-2 rounded-lg transition-colors whitespace-nowrap shadow-sm">
-                    Copiar CA
-                </button>
+                
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                    Proyecto WOLF <br>
+                    <span class="bg-gradient-to-r from-wolf-600 to-amber-500 bg-clip-text text-transparent">
+                        Blockchain para el Bienestar de Animales Abandonados
+                    </span>
+                </h1>
+                
+                <p class="text-gray-600 text-base max-w-xl mb-8 font-normal leading-relaxed">
+                    Una iniciativa tecnológica estructurada para financiar, rescatar y proteger de manera directa a animales en situación de vulnerabilidad, utilizando microdonaciones eficientes y transparencia absoluta en la red descentralizada de BNB Chain.
+                </p>
+
+                <!-- DIRECCIÓN DEL CONTRATO -->
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 max-w-xl mb-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div class="text-left w-full overflow-hidden">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-0.5">Dirección del Contrato (BSC)</p>
+                        <code class="text-xs text-slate-900 font-mono block truncate font-bold">0x0000000000000000000000000000000000000000</code>
+                    </div>
+                    <button onclick="navigator.clipboard.writeText('0x0000000000000000000000000000000000000000'); alert('¡Contrato copiado!');" class="text-xs font-bold text-gray-700 bg-white hover:bg-gray-100 border border-gray-300 px-4 py-2 rounded-lg transition-colors whitespace-nowrap shadow-sm">
+                        Copiar CA
+                    </button>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" target="_blank" class="bg-wolf-600 hover:bg-wolf-500 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-md shadow-wolf-600/10 text-center min-w-[160px]">
+                        Ver en Four.meme
+                    </a>
+                    <a href="#casos" class="bg-white hover:bg-gray-50 text-gray-700 font-medium px-8 py-3 rounded-xl border border-gray-300 transition-all text-center min-w-[160px] shadow-sm">
+                        Casos de Ayuda
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: El Logo Integrado limpiamente -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                <div class="bg-white p-4 rounded-3xl border border-gray-200 shadow-md max-w-[320px] w-full">
+                    <div class="aspect-square w-full bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 flex items-center justify-center">
+                        <img src="logo.jpg" alt="WOLF Emblem" class="w-full h-full object-contain">
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Identificador Oficial</p>
+                        <p class="text-sm font-extrabold text-slate-900 mt-0.5">Símbolo del Token: $WOLF</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" target="_blank" class="bg-wolf-600 hover:bg-wolf-500 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-md shadow-wolf-600/10 min-w-[160px]">
-                    Ver en Four.meme
-                </a>
-                <a href="#tokenomics" class="bg-white hover:bg-gray-50 text-gray-700 font-medium px-8 py-3 rounded-xl border border-gray-300 transition-all min-w-[160px] shadow-sm">
-                    Distribución Financiera
-                </a>
-            </div>
         </div>
     </header>
 
-    <section id="proposito" class="max-w-5xl mx-auto px-6 py-24">
+    <!-- PROPÓSITO: EL PROBLEMA Y LA SOLUCIÓN -->
+    <section id="proposito" class="max-w-6xl mx-auto px-6 py-24">
         <div class="grid md:grid-cols-2 gap-12">
             <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm">
                 <div class="w-10 h-10 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-bold text-lg mb-5">🚨</div>
                 <h3 class="text-xl font-bold text-slate-900 mb-3">La Realidad Actual</h3>
                 <p class="text-gray-600 text-sm leading-relaxed">
-                    Miles de animales en estado de desamparo sufren por la falta de un flujo de recursos constante. Las fundaciones tradicionales a menudo se enfrentan a trabas burocráticas e intermediarios, limitando el acceso inmediato a alimentos básicos y atención veterinaria de emergencia.
+                    Miles de animales en estado de desamparo sufren diariamente por la falta de un flujo de recursos constante. Las fundaciones tradicionales a menudo enfrentan trabas burocráticas e intermediarios, limitando el acceso inmediato a alimentos básicos y atención veterinaria de emergencia.
                 </p>
             </div>
             <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm">
@@ -115,24 +140,83 @@
         </div>
     </section>
 
-    <section class="bg-gray-50 border-y border-gray-200/60 py-16 px-6">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-                <p class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-2">Casos Atendidos</p>
-                <p class="text-3xl font-extrabold text-slate-900">4,812 +</p>
+    <!-- NUEVA SECCIÓN: TARJETAS DE ANIMALES Y CASOS DE AYUDA (ESTILO INSTITUCIONAL) -->
+    <section id="casos" class="bg-gray-50 border-y border-gray-200/60 py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-3">Casos Registrados y Canales de Impacto</h2>
+                <p class="text-gray-500 text-sm max-w-md mx-auto">Módulos de asistencia activa financiados mediante la liquidez del ecosistema.</p>
             </div>
-            <div class="border-t md:border-t-0 md:border-x border-gray-200 py-6 md:py-0">
-                <p class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-2">Soporte Médico Desplegado</p>
-                <p class="text-3xl font-extrabold text-slate-900">$42,500 USD</p>
-            </div>
-            <div>
-                <p class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-2">Refugios Vinculados</p>
-                <p class="text-3xl font-extrabold text-slate-900">38 Entidades</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta 1: Albergue y Alimentación -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-gray-200 relative">
+                            <!-- Placeholder de imagen representativa de animal -->
+                            <div class="absolute inset-0 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=600')]"></div>
+                            <span class="absolute top-4 left-4 bg-orange-500 text-white font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-md">Alimentación</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">Abastecimiento de Alimento Masivo</h4>
+                            <p class="text-gray-600 text-xs leading-relaxed">
+                                Distribución programada de raciones de comida balanceada de alta calidad para refugios aliados sobrepoblados y colonias de animales comunitarios en estado crítico.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-gray-100 flex justify-between items-center bg-gray-50/50">
+                        <span class="text-[11px] font-semibold text-gray-400">Meta Trimestral: 5 Toneladas</span>
+                        <span class="text-xs font-bold text-orange-600">Activo</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Apoyo Médico -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-gray-200 relative">
+                            <div class="absolute inset-0 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&q=80&w=600')]"></div>
+                            <span class="absolute top-4 left-4 bg-blue-500 text-white font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-md">Salud Clínica</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">Casos Clínicos de Emergencia</h4>
+                            <p class="text-gray-600 text-xs leading-relaxed">
+                                Cobertura financiera total para intervenciones quirúrgicas complejas, tratamientos de traumatología y suministro de medicinas especializadas para animales rescatados de accidentes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-gray-100 flex justify-between items-center bg-gray-50/50">
+                        <span class="text-[11px] font-semibold text-gray-400">Atención Veterinaria Inmediata</span>
+                        <span class="text-xs font-bold text-blue-600">Asignado</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Campaña de Control -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-gray-200 relative">
+                            <div class="absolute inset-0 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=600')]"></div>
+                            <span class="absolute top-4 left-4 bg-green-500 text-white font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-md">Control Poblacional</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">Jornadas Quirúrgicas de Esterilización</h4>
+                            <p class="text-gray-600 text-xs leading-relaxed">
+                                Campañas agresivas y castraciones controladas en zonas periféricas vulnerables para reducir permanentemente los índices de abandono desde el origen del problema.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-gray-100 flex justify-between items-center bg-gray-50/50">
+                        <span class="text-[11px] font-semibold text-gray-400">Próxima Jornada: Q2</span>
+                        <span class="text-xs font-bold text-green-600">Planificado</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="tokenomics" class="max-w-5xl mx-auto px-6 py-24">
+    <!-- DISTRIBUCIÓN DE RECURSOS (TOKENOMICS) -->
+    <section id="tokenomics" class="max-w-6xl mx-auto px-6 py-24">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold text-slate-900 mb-3">Distribución de Recursos (Tokenomics)</h2>
             <p class="text-gray-500 text-sm max-w-md mx-auto">Métricas del ecosistema destinadas a resguardar la liquidez del mercado y avalar el impacto social.</p>
@@ -158,10 +242,11 @@
         </div>
     </section>
 
+    <!-- MÓDULOS OPERATIVOS -->
     <section id="modulos" class="bg-gray-50 border-y border-gray-200/60 py-24 px-6">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-3">Ejes del Ecosistema</h2>
+                <h2 class="text-3xl font-bold text-slate-900 mb-3">Ejes del Ecosistema Descentralizado</h2>
                 <p class="text-gray-500 text-sm">Estructura organizada en tres frentes de ejecución transparente.</p>
             </div>
 
@@ -194,6 +279,7 @@
         </div>
     </section>
 
+    <!-- ROADMAP / RUTA -->
     <section id="roadmap" class="max-w-3xl mx-auto px-6 py-24">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold text-slate-900 mb-3">Ruta Estratégica</h2>
@@ -209,15 +295,16 @@
             </div>
             <div class="relative">
                 <span class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-gray-300 border-2 border-white ring-4 ring-gray-50"></span>
-                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Fase 2: Ejecución</h4>
+                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Fase 2: Execution</h4>
                 <p class="text-slate-900 font-semibold text-base mb-1">Campañas Quirúrgicas y Logística</p>
                 <p class="text-gray-600 text-xs leading-relaxed">Activación del primer fondo transparente de ayuda para financiar castraciones masivas en sectores críticos de alta densidad de abandono animal.</p>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER / COMUNIDAD -->
     <footer class="bg-gray-50 border-t border-gray-200 px-6 py-12 text-xs text-gray-500">
-        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
             <div class="flex items-center space-x-2">
                 <div class="w-6 h-6 bg-white rounded-full overflow-hidden p-0.5 border border-gray-200">
                     <img src="logo.jpg" alt="WOLF" class="w-full h-full object-contain rounded-full">
